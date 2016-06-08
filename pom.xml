@@ -2,19 +2,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.test.action</groupId>
-	<artifactId>action</artifactId>
+	<artifactId>struts2</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>action Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<compile.level>1.7</compile.level>
+		<compile.level>1.8</compile.level>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.2.5.RELEASE</spring.version>
-		<struts2.version>2.3.24.1</struts2.version>
+		<spring.version>4.2.6.RELEASE</spring.version>
+		<struts2.version>2.5</struts2.version>
 		<urlrewrite.version>2.5.2</urlrewrite.version>
-		<fastjson.version>1.2.8</fastjson.version>
+		<fastjson.version>1.2.12</fastjson.version>
+		<servlet-api.version>2.5</servlet-api.version>
+		<jsp-api.version>2.1</jsp-api.version>
+		<jstl.version>1.2</jstl.version>
 
 		<maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
 		<maven-war-plugin.version>2.6</maven-war-plugin.version>
@@ -44,19 +47,19 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
+			<version>${servlet-api.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
-			<version>2.1</version>
+			<version>${jsp-api.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<version>1.2</version>
+			<version>${jstl.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
