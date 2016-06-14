@@ -9,7 +9,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<compile.level>1.8</compile.level>
+		<compile.level>1.7</compile.level>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.2.6.RELEASE</spring.version>
 		<struts2.version>2.5</struts2.version>
