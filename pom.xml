@@ -9,10 +9,10 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<compile.level>1.7</compile.level>
+		<compile.level>1.8</compile.level>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.2.6.RELEASE</spring.version>
-		<struts2.version>2.5</struts2.version>
+		<spring.version>4.3.1.RELEASE</spring.version>
+		<struts2.version>2.5.1</struts2.version>
 		<urlrewrite.version>2.5.2</urlrewrite.version>
 		<fastjson.version>1.2.12</fastjson.version>
 		<servlet-api.version>2.5</servlet-api.version>
