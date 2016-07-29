@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.AllowedMethods;
 import org.apache.struts2.convention.annotation.InterceptorRef;
 import org.apache.struts2.convention.annotation.InterceptorRefs;
 
@@ -11,6 +12,7 @@ import com.alibaba.fastjson.JSON;
 import com.test.BuildHelper;
 import com.test.bean.User;
 
+@AllowedMethods("all")
 @Action(value = "user")
 @InterceptorRefs({ @InterceptorRef("defaultStack"), @InterceptorRef("testInterceptor") })
 public class UserAction extends BaseAction {

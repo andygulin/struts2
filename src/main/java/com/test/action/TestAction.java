@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.AllowedMethods;
 import org.apache.struts2.convention.annotation.InterceptorRef;
 import org.apache.struts2.convention.annotation.InterceptorRefs;
 import org.apache.struts2.convention.annotation.Result;
@@ -12,6 +13,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.test.BuildHelper;
 import com.test.bean.User;
 
+@AllowedMethods({ "execute", "action", "req" })
 @Action(value = "test", results = { @Result(name = "action", location = "/WEB-INF/jsp/action.jsp"),
 		@Result(name = "success", location = "/WEB-INF/jsp/index.jsp") })
 @InterceptorRefs({ @InterceptorRef("defaultStack"), @InterceptorRef("testInterceptor") })

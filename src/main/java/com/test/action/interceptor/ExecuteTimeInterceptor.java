@@ -1,5 +1,6 @@
 package com.test.action.interceptor;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.StopWatch;
 
 import com.alibaba.fastjson.JSON;
@@ -15,9 +16,10 @@ public class ExecuteTimeInterceptor extends AbstractInterceptor {
 		StopWatch watch = new StopWatch("ExecuteTime");
 		watch.start("ExecuteTimeInterceptor");
 		String result = invocation.invoke();
+		watch.stop();
+		System.out.println(StringUtils.repeat("=", 80));
 		System.out.println("Action :" + invocation.getAction());
 		System.out.println("Result : " + invocation.getResult());
-		watch.stop();
 		System.out.println("Id : " + watch.getId());
 		System.out.println("LastTaskName : " + watch.getLastTaskName());
 		System.out.println("LastTaskTimeMillis " + watch.getLastTaskTimeMillis());
@@ -26,6 +28,7 @@ public class ExecuteTimeInterceptor extends AbstractInterceptor {
 		System.out.println("TotalTimeSeconds : " + watch.getTotalTimeSeconds());
 		System.out.println("LastTaskInfo : " + JSON.toJSONString(watch.getLastTaskInfo()));
 		System.out.println("TaskInfo : " + JSON.toJSONString(watch.getTaskInfo()));
+		System.out.println(StringUtils.repeat("=", 80));
 		return result;
 	}
 }
