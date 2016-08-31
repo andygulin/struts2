@@ -11,10 +11,10 @@
 	<properties>
 		<compile.level>1.8</compile.level>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.3.1.RELEASE</spring.version>
+		<spring.version>4.3.2.RELEASE</spring.version>
 		<struts2.version>2.5.2</struts2.version>
 		<urlrewrite.version>2.5.2</urlrewrite.version>
-		<fastjson.version>1.2.14</fastjson.version>
+		<fastjson.version>1.2.16</fastjson.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<jsp-api.version>2.1</jsp-api.version>
 		<jstl.version>1.2</jstl.version>
@@ -27,7 +27,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
+			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
