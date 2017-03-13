@@ -4,23 +4,23 @@
     <groupId>com.test.action</groupId>
     <artifactId>struts2</artifactId>
     <packaging>war</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <name>action Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
     <properties>
         <compile.level>1.8</compile.level>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>4.3.4.RELEASE</spring.version>
-        <struts2.version>2.5.8</struts2.version>
+        <spring.version>4.3.7.RELEASE</spring.version>
+        <struts2.version>2.5.10.1</struts2.version>
         <urlrewrite.version>2.5.2</urlrewrite.version>
-        <fastjson.version>1.2.23</fastjson.version>
+        <fastjson.version>1.2.28</fastjson.version>
         <servlet-api.version>2.5</servlet-api.version>
         <jsp-api.version>2.1</jsp-api.version>
         <jstl.version>1.2</jstl.version>
         <log4j.version>2.5</log4j.version>
 
-        <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
     </properties>
 
