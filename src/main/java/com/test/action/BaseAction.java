@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
-public class BaseAction extends ActionSupport
+public abstract class BaseAction
+        extends ActionSupport
         implements ServletRequestAware, ServletResponseAware, SessionAware, ApplicationAware {
 
     private static final long serialVersionUID = -1101792624159255155L;
@@ -40,5 +41,4 @@ public class BaseAction extends ActionSupport
         this.application = application;
 
     }
-
 }

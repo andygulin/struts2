@@ -3,15 +3,22 @@ package com.test.action;
 import com.alibaba.fastjson.JSONObject;
 import com.test.BuildHelper;
 import com.test.bean.User;
-import org.apache.struts2.convention.annotation.*;
+import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.AllowedMethods;
+import org.apache.struts2.convention.annotation.InterceptorRef;
+import org.apache.struts2.convention.annotation.InterceptorRefs;
+import org.apache.struts2.convention.annotation.Result;
 
 import java.io.PrintWriter;
 import java.util.List;
 
 @AllowedMethods({"execute", "action", "req"})
-@Action(value = "test", results = {@Result(name = "action", location = "/WEB-INF/jsp/action.jsp"),
+@Action(value = "test", results = {
+        @Result(name = "action", location = "/WEB-INF/jsp/action.jsp"),
         @Result(name = "success", location = "/WEB-INF/jsp/index.jsp")})
-@InterceptorRefs({@InterceptorRef("defaultStack"), @InterceptorRef("testInterceptor")})
+@InterceptorRefs({
+        @InterceptorRef("defaultStack"),
+        @InterceptorRef("testInterceptor")})
 public class TestAction extends BaseAction {
 
     private static final long serialVersionUID = -1314518014039734426L;
