@@ -11,10 +11,10 @@
     <properties>
         <compile.level>1.8</compile.level>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>4.3.8.RELEASE</spring.version>
+        <spring.version>4.3.9.RELEASE</spring.version>
         <struts2.version>2.5.10.1</struts2.version>
         <urlrewrite.version>2.5.2</urlrewrite.version>
-        <fastjson.version>1.2.32</fastjson.version>
+        <fastjson.version>1.2.34</fastjson.version>
         <servlet-api.version>2.5</servlet-api.version>
         <jsp-api.version>2.1</jsp-api.version>
         <jstl.version>1.2</jstl.version>
