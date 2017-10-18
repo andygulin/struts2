@@ -15,10 +15,9 @@ import java.util.List;
 @AllowedMethods({"execute", "action", "req"})
 @Action(value = "test", results = {
         @Result(name = "action", location = "/WEB-INF/jsp/action.jsp"),
-        @Result(name = "success", location = "/WEB-INF/jsp/index.jsp")})
-@InterceptorRefs({
-        @InterceptorRef("defaultStack"),
-        @InterceptorRef("testInterceptor")})
+        @Result(name = "success", location = "/WEB-INF/jsp/index.jsp")
+})
+@InterceptorRefs({@InterceptorRef("defaultStack"), @InterceptorRef("testInterceptor")})
 public class TestAction extends BaseAction {
 
     private static final long serialVersionUID = -1314518014039734426L;

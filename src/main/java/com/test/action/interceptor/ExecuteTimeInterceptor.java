@@ -4,11 +4,15 @@ import com.alibaba.fastjson.JSON;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.util.StopWatch;
 
 public class ExecuteTimeInterceptor extends AbstractInterceptor {
 
     private static final long serialVersionUID = 4172535605107971334L;
+
+    private static final Logger LOGGER = LogManager.getLogger(ExecuteTimeInterceptor.class);
 
     @Override
     public String intercept(ActionInvocation invocation) throws Exception {
@@ -16,18 +20,18 @@ public class ExecuteTimeInterceptor extends AbstractInterceptor {
         watch.start("ExecuteTimeInterceptor");
         String result = invocation.invoke();
         watch.stop();
-        System.out.println(StringUtils.repeat("=", 80));
-        System.out.println("Action :" + invocation.getAction());
-        System.out.println("Result : " + invocation.getResult());
-        System.out.println("Id : " + watch.getId());
-        System.out.println("LastTaskName : " + watch.getLastTaskName());
-        System.out.println("LastTaskTimeMillis " + watch.getLastTaskTimeMillis());
-        System.out.println("TaskCount : " + watch.getTaskCount());
-        System.out.println("TotalTimeMillis : " + watch.getTotalTimeMillis());
-        System.out.println("TotalTimeSeconds : " + watch.getTotalTimeSeconds());
-        System.out.println("LastTaskInfo : " + JSON.toJSONString(watch.getLastTaskInfo()));
-        System.out.println("TaskInfo : " + JSON.toJSONString(watch.getTaskInfo()));
-        System.out.println(StringUtils.repeat("=", 80));
+        LOGGER.info(StringUtils.repeat("=", 80));
+        LOGGER.info("Action : {}", invocation.getAction());
+        LOGGER.info("Result : {}", invocation.getResult());
+        LOGGER.info("Id : {}", watch.getId());
+        LOGGER.info("LastTaskName : {}", watch.getLastTaskName());
+        LOGGER.info("LastTaskTimeMillis : {}", watch.getLastTaskTimeMillis());
+        LOGGER.info("TaskCount : {}", watch.getTaskCount());
+        LOGGER.info("TotalTimeMillis : {}", watch.getTotalTimeMillis());
+        LOGGER.info("TotalTimeSeconds : {}", watch.getTotalTimeSeconds());
+        LOGGER.info("LastTaskInfo : {}", JSON.toJSONString(watch.getLastTaskInfo()));
+        LOGGER.info("TaskInfo : {}", JSON.toJSONString(watch.getTaskInfo()));
+        LOGGER.info(StringUtils.repeat("=", 80));
         return result;
     }
 }
